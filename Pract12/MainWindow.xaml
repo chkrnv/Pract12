@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pract12"
         mc:Ignorable="d"
-        Title="Практическая работа №12" Height="350" Width="350" Loaded="Window_Loaded" Background="#FFC0CDEC" ResizeMode="NoResize" Icon="/gimp2_0.png">
+        Title="Практическая работа №12" Height="350" Width="350" Loaded="Window_Loaded" Background="#FFCDC3FC" ResizeMode="NoResize" Icon="/gimp2_0.png">
     <Grid>
 
         <Menu VerticalAlignment="Top" Background="#FFA58BD4">
@@ -30,7 +30,7 @@
                         </LinearGradientBrush>
                     </TabItem.Background>
 
-                    <Grid Background="#FFC0CDEC">
+                    <Grid Background="#FFCDC3FC">
                         <GroupBox Header="Исходные данные:" Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="108" Width="320">
                             <Grid>
                                 <TextBox x:Name="inputFirstValue" Margin="230,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Height="25" Width="65" TabIndex="0" ToolTip="Первое значение"/>
