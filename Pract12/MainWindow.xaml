@@ -64,7 +64,7 @@
                         </LinearGradientBrush>
                     </TabItem.Background>
 
-                    <Grid Background="#FFC0CDEC">
+                    <Grid Background="#FFA58BD4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="4*"/>
                             <ColumnDefinition Width="39*"/>
