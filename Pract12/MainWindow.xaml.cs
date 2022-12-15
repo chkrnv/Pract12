@@ -16,18 +16,18 @@ namespace Pract12
 
         DispatcherTimer timer;
 
-        public void Window_Loaded(object sender, RoutedEventArgs e)
+        public void Window_Loaded(object sender, RoutedEventArgs e)// окно загрузки
         {
-            timer = new DispatcherTimer();
+            timer = new DispatcherTimer();// создаем таймер
             timer.Tick += Timer_Tick;
-            timer.Interval = new TimeSpan(0, 0, 0, 1);
+            timer.Interval = new TimeSpan(0, 0, 0, 1);//дни часы секунды минуты
             timer.IsEnabled = true;
         }
         private void Timer_Tick(object? sender, EventArgs e)
         {
             DateTime d = DateTime.Now;
-            time.Text = d.ToString("HH:mm:ss");
-            date.Text = d.ToString("dddd dd.MM.yyyy");
+            time.Text = d.ToString("HH:mm:ss");//часы минуты секунды 
+            date.Text = d.ToString("dddd dd.MM.yyyy");//день недели, число, месяц, год
         }
 
         public void Выход_Click(object sender, RoutedEventArgs e)
@@ -58,15 +58,15 @@ namespace Pract12
 
             try
             {
-                uint firstValue = UInt32.Parse(inputFirstValue.Text);
+                uint firstValue = UInt32.Parse(inputFirstValue.Text);// проверяем что ввел пользователь 
                 uint secondValue = UInt32.Parse(inputSecondValue.Text);
                 uint thirdValue = UInt32.Parse(inputThirdValue.Text);
 
-                uint volume = firstValue * secondValue * thirdValue;
-                result1.Text = volume.ToString();
+                uint volume = firstValue * secondValue * thirdValue;// находим объем
+                result1.Text = volume.ToString();// записываем полученный объем
 
-                uint square = 2 * ((firstValue * secondValue) + (secondValue * thirdValue) + (firstValue * thirdValue));
-                result2.Text = square.ToString();
+                uint square = 2 * ((firstValue * secondValue) + (secondValue * thirdValue) + (firstValue * thirdValue));// находим площадь вроде
+                result2.Text = square.ToString();// записываем ее
             }
             catch (FormatException ex)
             {
@@ -81,12 +81,12 @@ namespace Pract12
         {
             try
             {
-                uint number1 = UInt32.Parse(inputValue.Text.Substring(0, 1));
+                uint number1 = UInt32.Parse(inputValue.Text.Substring(0, 1));//каждой цифре двузначного числа присваем переменную (0,1) и (1,1) это их позиция в двузначном числе 
                 uint number2 = UInt32.Parse(inputValue.Text.Substring(1, 1));
-                uint amount = number1 + number2;
-                uint multiplication = number1 * number2;
+                uint amount = number1 + number2;// ищем их сумму
+                uint multiplication = number1 * number2;// и произведение 
 
-                result3.Text = amount.ToString();
+                result3.Text = amount.ToString();// записываем в текст боксы
                 result4.Text = multiplication.ToString();
             }
             catch (FormatException ex)
